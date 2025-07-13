@@ -1,7 +1,7 @@
 FROM rocker/r-base:latest
 
 # Install shiny package
-RUN R -e "install.packages('shiny', repos='https://cran.rstudio.com/')"
+RUN R -e "install.packages(c('shiny', 'DT'), repos='https://cran.rstudio.com/')"
 
 # Copy app files to container
 COPY . /app
